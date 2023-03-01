@@ -1,0 +1,15 @@
+class Solution {
+    public static String removeX(String input){
+        if(input.length()==0){
+            return"";//  CHECK IT EMPTY STRING
+        }
+        if(input.charAt(0)=='x'){// CHECK IT CHARAT(0) PAR X MILEGA TOH RETURN JITNE ANDAR STRING KE  HONGE 
+            return removeX(input.substring(1));
+        }
+        return input.charAt(0)+removeX(input.substring(1));// THERE IS CHECK IT AND RETURN IT X IS REMOVE AND PRINT IT 
+    }
+
+    public static void main(String[] args) {
+        System.out.println(removeX("xaxbac")); 
+    }
+}
